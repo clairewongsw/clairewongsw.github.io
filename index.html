@@ -4,34 +4,55 @@
         <meta charset="utf-8">
         <title>Claire Wong</title>
         <style>
-            {font-family: Helvetica, sans-serif;
+            p {font-family: Helvetica, sans-serif;
+             text-align: left;
             }            
+            .border {
+                border-bottom: 1px solid rgb(222, 222, 222);
+                padding-bottom: 15px;
+            }
+            table {
+  				table-layout: fixed;
+  				width: 500px;
+                height: 50px;
+                
+			}
+
+			th,
+			td {
+				width: 250px;
+  				overflow: hidden;
+                max-width:250px;
+  				min-width:250px; 
+  				max-height:50px; 
+  				min-height:50px;
+			}
         </style>
     </head>
     <body>
 
-    <h1>Claire Wong</h1>
+        <h1><p>Claire Wong</p></h1>
     
-    <p>Hi there, I'm Claire Wong, a Regional Program Manager
+    <p class="border">Hi there, I'm Claire Wong, a Regional Program Manager</p>
     <table>
         <thead>
             <tr>
-                <th>Role</th>
-                <th>Working Period</th>
+                <th><p>Role</th>
+                <th><p>Working Period</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                Regional Program Manager
-                Sep 2019 - Current
+                <td><p>Regional Program Manager</td>
+                <td><p>Sep 2019 - Current</td>
             </tr>
             <tr>
-                Unit Manager
-                Jan 2017 - Jul 2019
+                <td><p>Unit Manager</td>
+                <td><p>Jan 2017 - Jul 2019</td>
             </tr>
             <tr>
-                Dietitian
-                Feb 2016 - Dec 2016
+               <td><p>Dietitian</td>
+                <td><p>Feb 2016 - Dec 2016</td>
             </tr>
         </tbody>
     </table>
