@@ -1,61 +1,129 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Claire Wong</title>
-        <style>
-            p {font-family: Helvetica, sans-serif;
-             text-align: left;
-            }            
-            .border {
-                border-bottom: 1px solid rgb(222, 222, 222);
-                padding-bottom: 15px;
-            }
-            table {
-  				table-layout: fixed;
-  				width: 500px;
-                height: 50px;
-                
-			}
+<html lang="en">
+<head>
+<title>Claire Wong</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-			th,
-			td {
-				width: 250px;
-  				overflow: hidden;
-                max-width:250px;
-  				min-width:250px; 
-  				max-height:50px; 
-  				min-height:50px;
-			}
-        </style>
-    </head>
-    <body>
+p {font-family: Helvetica, sans-serif;
+            }        
 
-        <h1><p>Claire Wong</p></h1>
+body {
+  margin: 0;
+}
+
+/* header */
+.header {
+  background-color: #0000;
+  padding: 20px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+/* links banner */
+.sidenav {
+  overflow: hidden;
+}
+
+/* links words no banner */
+.sidenav a {
+  float: center;
+  color: #000;
+  text-align: center;
+  padding: 5px 16px;
+}
+
+/* hover colour */
+.sidenav a:hover {
+  color: #f2f2f2;
+}
+
+/* top column */
+.top {
+  float: left;
+  padding: 10px;
+  column-count: 3;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: lightblue;
+}
+
+/* two equal column */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+  
+/* image */
+  div.image {
+  margin: 10px;
+  float: left;
+  width: 300px;
+}
+
+div.image img {
+  width: 100%;
+  height: auto;
+}
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="top">
+    <div class="image">
+    <img src="https://media-exp1.licdn.com/dms/image/C5603AQHbpWd7DM3JKw/profile-displayphoto-shrink_400_400/0/1623488027399?e=1634774400&v=beta&t=GreQ8jb56ibewdiHHBiYPT1jLVOvHV_CxPAbS1H-vxY" alt="Claire Wong" width="250">
+   <div class="header">
+  <h1>Claire Wong</h1>
+  <p>Regional Program Manager and Business Analyst</p>
+</div>
+   <h4><p>Hi there!</p></h4><p>I'm an APAC Program Manager with 6 years of experience in designing technology systems specialising in automation. Experienced in global business integration, strategies, business analytics and project management for Fortune 500 companies with a data-driven decision making mindset.
     
-    <p class="border">Hi there, I'm Claire Wong, a Regional Program Manager</p>
-    <table>
-        <thead>
-            <tr>
-                <th><p>Role</th>
-                <th><p>Working Period</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><p>Regional Program Manager</td>
-                <td><p>Sep 2019 - Current</td>
-            </tr>
-            <tr>
-                <td><p>Unit Manager</td>
-                <td><p>Jan 2017 - Jul 2019</td>
-            </tr>
-            <tr>
-               <td><p>Dietitian</td>
-                <td><p>Feb 2016 - Dec 2016</td>
-            </tr>
-        </tbody>
-    </table>
-
-    </body>
+    Connect with me here:</p>
+    <div class="sidenav">
+  <a href="mailto:clairewsw@gmail.com"><p>Email</P></a>
+  <a href="https://www.linkedin.com/in/clairewongshaowen/"><p>LinkedIn</p></a>
+</div>
+  </a>
+</div>
+  </div>
+  
+  	<div class="column">
+    <h3><p>Work Experience</p></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  
+  <div class="column">
+    <h3><p>Professional Certificates</p></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    <h3><p>Skills and Interests</p></h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    
+  </div>
+</div>
+  
+</body>
 </html>
