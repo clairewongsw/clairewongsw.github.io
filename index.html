@@ -14,35 +14,47 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 h1 {
   font-family: Merriweather, serif;
   font-size: 28px;
-  text-align: left;
+  text-align: center;
+  line-height: 1.6;
 }
 
 h2 {
+  font-family: Merriweather, serif;
   font-style: bold;
-  font-size: 20px;
-  text-align: left;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.6;
 }
 
 h3 {
+  font-family: Merriweather, serif;
   font-style: bold;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
+  line-height: 1.6;
 }
 
 h4 {
   font-style: italic;
   font-size: 16px;
   text-align: left;
+  line-height: 1.6;
 }
+
 
 /* Bullets */
 ul.square {
   list-style-type: square;
+}
+
+p.content {
+  margin-top: 10px;
 }
 
 /* Tooltip */
@@ -83,7 +95,10 @@ ul.square {
   padding: 8px;
   margin-top: 7px;
   border-bottom: 1px solid #f1f1f1;
+  text-align: center;
 }
+
+
 /* Main column */
 .main {
   float: right;
@@ -96,22 +111,22 @@ ul.square {
 /* For tablets */
   .menu {
     width: 50%;
-    padding: 0;
+    padding: 15px;
   }
   .main {
     width: 50%;
-    padding: 0;
+    padding: 15px;
   }
 }
 @media only screen and (max-width:500px) {
 /* For mobile phones */
   .menu {
     width: 100%;
-    padding: 0;
+    padding: 15px;
   }
   .main {
     width: 100%;
-    padding: 0;
+    padding: 15px;
   }
 }
 
@@ -140,11 +155,11 @@ ul.square {
     overflow: hidden;
     transition: max-height .35s;
   }
-  /* :checked */
+ /* :checked */
   .so-tab input:checked ~ .so-tab-content {
     max-height: none;
   }
-  /* Icon */
+ /* Icon */
   .so-tab label::after {
     position: absolute;
     right: 0;
@@ -174,9 +189,9 @@ ul.square {
 	
  	<div class="menu">
    
-    <div class="menuitem"><img src="https://media-exp1.licdn.com/dms/image/C5603AQHbpWd7DM3JKw/profile-displayphoto-shrink_400_400/0/1623488027399?e=1634774400&v=beta&t=GreQ8jb56ibewdiHHBiYPT1jLVOvHV_CxPAbS1H-vxY" alt="Claire Wong" width="200">
+    <div class="menuitem"><img src="https://media-exp1.licdn.com/dms/image/C5603AQHbpWd7DM3JKw/profile-displayphoto-shrink_400_400/0/1623488027399?e=1634774400&v=beta&t=GreQ8jb56ibewdiHHBiYPT1jLVOvHV_CxPAbS1H-vxY" alt="Claire Wong" width="250">
     <h1>Claire Wong</h1>
-	<h2>Regional Program Manager and Business Analyst</h2>
+   	<h2>Regional Program Manager and Business Analyst</h2>
     <p> Hi there! I'm Claire, a Regional Program Manager who has strong interest in automation and artificial intelligence.👋</p>
     <p> 你好，我是黄劭雯，一个对自动化人工智能有着浓厚的兴趣的亚太区区域项目经理。</p></div>
     <div class="menuitem"><a href="https://www.linkedin.com/in/clairewongshaowen/"><i style="font-size:24px" class="fa">&#xf08c;</i></a></div>
@@ -188,12 +203,13 @@ ul.square {
     
 	<div class="main">
 
-	<h2>Working Experience</h2>
+	<h3>Working Experience</h3>
 
     <div class="so-accordion-wrapper">
-	<div class="so-tab"><b>Sep 2019 - Current | Cisco Systems, Inc. @ CBRE, APAC</b><input name="tabs" type="checkbox" id="so-tab-1"> 
+	<div class="so-tab"><b>Sep 2019 - Current | Cisco Systems, Inc. @ CBRE, APAC</b>
+    <input name="tabs" type="checkbox" id="so-tab-1"> 
     <label for="so-tab-1"><i>Regional Program Manager and Business Analyst</i>
-	</label>
+    </label>
 	<div class="so-tab-content">
 	<ul>
 	<li>Over six years of management experience: team development, hiring, strategic leadership.</li>
@@ -204,10 +220,10 @@ ul.square {
 	<li>Designed and deployed a new automated employee onboarding system for 7 business units, improved onboarding time by 4-fold.</li>
 	<li>Developed business integrity, regulatory enforcement, product, and technical systems quarterly training programs for 100+ employees of non tech background.</li>
 	<li>Coached leaders and teammates with technology tools such as SmartSheet and SharePoint to bring positive impact on business processes improvement. </li>
-    </ul>
+    </ul> 
+    </div>
 	</div>
-	</div>
-   
+   	
 	<div class="so-tab"><b>Jan 2017 - Jul 2019 | Google Inc. @ Sodexo, Malaysia</b><input name="tabs" type="checkbox" id="so-tab-2"> <label for="so-tab-2"><i>Unit Manager</i></label>
 <div style="text-align: start;" class="so-tab-content">
 	<ul>
@@ -232,7 +248,7 @@ ul.square {
 	</div>
 	</div>
 
-	<h2>Academics History</h2>
+	<h3>Academics History</h3>
 
 	<ul>
   	<li>Project Management Professional (PMP®)
