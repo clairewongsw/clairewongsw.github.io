@@ -1,129 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <title>Claire Wong</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
 <style>
-* {
-  box-sizing: border-box;
-}
 
-p {font-family: Helvetica, sans-serif;
-            }        
-
-body {
-  margin: 0;
-}
-
-/* header */
+/* Fonts */
 .header {
-  background-color: #0000;
   padding: 20px;
   text-align: center;
-  font-family: Helvetica, sans-serif;
 }
 
-/* links banner */
-.sidenav {
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Merriweather, serif;
+  font-size: 46px;
+  text-align: center;
+}
+
+h2 {
+  font-style: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+h3 {
+  font-style: bold;
+  font-size: 16px;
+  text-align: left;
+}
+
+h4 {
+  font-style: italic;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Bullets */
+ul.square {
+  list-style-type: square;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Left column */
+.menu {
+  float: left;
+  width: 30%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+/* Main column */
+.main {
+  float: right;
+  width: 60%;
+  padding: 0 20px;
   overflow: hidden;
 }
 
-/* links words no banner */
-.sidenav a {
-  float: center;
-  color: #000;
-  text-align: center;
-  padding: 5px 16px;
-}
-
-/* hover colour */
-.sidenav a:hover {
-  color: #f2f2f2;
-}
-
-/* top column */
-.top {
-  float: left;
-  padding: 10px;
-  column-count: 3;
-  column-gap: 40px;
-  column-rule-style: solid;
-  column-rule-width: 1px;
-  column-rule-color: lightblue;
-}
-
-/* two equal column */
-.column {
-  float: left;
-  width: 50%;
-  padding: 15px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
+@media only screen and (max-width:800px) {
+/* For tablets */
+  .menu {
+    width: 50%;
+    padding: 0;
   }
-  
-/* image */
-  div.image {
-  margin: 10px;
-  float: left;
-  width: 300px;
+  .main {
+    width: 50%;
+    padding: 0;
+  }
+}
+@media only screen and (max-width:500px) {
+/* For mobile phones */
+  .menu {
+    width: 100%;
+    padding: 0;
+  }
+  .main {
+    width: 100%;
+    padding: 0;
+  }
 }
 
-div.image img {
-  width: 100%;
-  height: auto;
-}
-}
+/* Read More */
+.so-tab {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 25px 0;
+  }
+  .so-tab label {
+    position: relative;
+    display: block;
+    padding: 0 25px 0 0;
+    margin-bottom: 15px;
+    line-height: normal;
+    cursor: pointer;
+  }
+  .so-tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  .so-tab-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s;
+  }
+  /* :checked */
+  .so-tab input:checked ~ .so-tab-content {
+    max-height: none;
+  }
+  /* Icon */
+  .so-tab label::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+  }
+  .so-tab input[type=checkbox] + label::after {
+    content: "+";
+  }
+  .so-tab input[type=radio] + label::after {
+    content: "\25BC";
+  }
+  .so-tab input[type=checkbox]:checked + label::after {
+    transform: rotate(315deg);
+  }
+  .so-tab input[type=radio]:checked + label::after {
+    transform: rotateX(180deg);
+  }
 </style>
 </head>
+
+<div class="header">
+	<h1>Claire Wong</h1>
+	<p>Regional Program Manager and Business Analyst</p></div>
+    
 <body>
 
-
-
-<div class="row">
-  <div class="top">
-    <div class="image">
-    <img src="https://media-exp1.licdn.com/dms/image/C5603AQHbpWd7DM3JKw/profile-displayphoto-shrink_400_400/0/1623488027399?e=1634774400&v=beta&t=GreQ8jb56ibewdiHHBiYPT1jLVOvHV_CxPAbS1H-vxY" alt="Claire Wong" width="250">
-   <div class="header">
-  <h1>Claire Wong</h1>
-  <p>Regional Program Manager and Business Analyst</p>
+	
+ 	<div class="menu">
+   
+    <div class="menuitem"><img src="https://media-exp1.licdn.com/dms/image/C5603AQHbpWd7DM3JKw/profile-displayphoto-shrink_400_400/0/1623488027399?e=1634774400&v=beta&t=GreQ8jb56ibewdiHHBiYPT1jLVOvHV_CxPAbS1H-vxY" alt="Claire Wong" width="200">
+    <p> Hi there! I'm Claire, a Regional Program Manager who has strong interest in automation and artificial intelligence.👋</p>
+    <p> 你好，我是黄劭雯，一个对自动化人工智能有着浓厚的兴趣的亚太区区域项目经理。</p></div>
+    <div class="menuitem"><a href="https://www.linkedin.com/in/clairewongshaowen/">LinkedIn</a></div>
+    <div class="menuitem"><a href="mailto:clairewsw@gmail.com">Email</a></div>
+    <div class="menuitem"><a href="www.x.com">Curriculum Vitae</a>
 </div>
-   <h4><p>Hi there!</p></h4><p>I'm an APAC Program Manager with 6 years of experience in designing technology systems specialising in automation. Experienced in global business integration, strategies, business analytics and project management for Fortune 500 companies with a data-driven decision making mindset.
+  
+  	</div>
     
-    Connect with me here:</p>
-    <div class="sidenav">
-  <a href="mailto:clairewsw@gmail.com"><p>Email</P></a>
-  <a href="https://www.linkedin.com/in/clairewongshaowen/"><p>LinkedIn</p></a>
+	<div class="main">
+
+	<h2>Working Experience</h2>
+
+    <div class="so-accordion-wrapper">
+	<div class="so-tab"><b>Sep 2019 - Current | Cisco Systems, Inc. @ CBRE, APAC</b><input name="tabs" type="checkbox" id="so-tab-1"> 
+    <label for="so-tab-1"><i>Regional Program Manager and Business Analyst</i>
+	</label>
+	<div class="so-tab-content">
+	<ul>
+	<li>Over six years of management experience: team development, hiring, strategic leadership.</li>
+	<li>Led multi-phased program strategic initiatives with direct impact on business improvements for additional revenue of USD 115k per year across 16 countries including China, India, Australia, New Zealand, and Southeast Asia.
+</li>
+	<li>Led a team developing a temporal database and program for tracing building data through mobile application and surveys submission to problem-solve employee services.</li>
+	<li>Developed demo in cooperation with business intelligence teams and engineers through SmartSheet, SharePoint, and Tableau to track key performance indicators (KPIs), identify trends, and monitor business initiatives.</li>
+	<li>Designed and deployed a new automated employee onboarding system for 7 business units, improved onboarding time by 4-fold.</li>
+	<li>Developed business integrity, regulatory enforcement, product, and technical systems quarterly training programs for 100+ employees of non tech background.</li>
+	<li>Coached leaders and teammates with technology tools such as SmartSheet and SharePoint to bring positive impact on business processes improvement. </li>
+    </ul>
+	</div>
+	</div>
+   
+	<div class="so-tab"><b>Jan 2017 - Jul 2019 | Google Inc. @ Sodexo, Malaysia</b><input name="tabs" type="checkbox" id="so-tab-2"> <label for="so-tab-2"><i>Unit Manager</i></label>
+<div style="text-align: start;" class="so-tab-content">
+	<ul>
+	<li>Promoted from Dietitian to Unit Manager within 6 months.</li>
+    <li>Executed and arranged specialised projects for startup, including 30 days tailored member plan, personal consultation, and customer service by collaborating with business partners.</li>
+	<li>Researched and evaluated products for the marketplace on costs, health benefits and local guidelines.
+</li>
+    </ul>
+	</div>
+	</div>
+ 
+	<div class="so-tab"><b>Feb 2016 - Dec 2016 | PurelyB, Malaysia</b><input name="tabs" type="checkbox" id="so-tab-3"> <label for="so-tab-3"><i>Dietitian</i></label>
+<div style="text-align: start;" class="so-tab-content">
+	<ul>
+	<li>Promoted from Dietitian to Unit Manager within 6 months.</li>
+    <li>Recruited, trained and grew a 30+ team; coordinating outsourcing vendors as service providers.</li>
+	<li>Implemented a tool for healthy snacks selection using probability and predictions on packaged snacks available against the U.S. Department of Agriculture (USDA) Nutrient Database following Google food program standards.
+</li>
+	<li>Pioneered and validated plastic waste program at Malaysia office solving problems on plastic waste; supported program rollout to SEA offices and India. Reduced quarterly plastic bottles level by 60%.</li>
+	<li>Maintained KPIs on customer satisfaction by 96% and 1% operating cost variance over 24-month.</li>
+    </ul>
+	</div>
+	</div>
+
+	<h2>Academics History</h2>
+
+	<ul>
+  	<li><div class="tooltip">Project Management Professional (PMP®)<span class="tooltiptext">Internationally recognized professional designation.</span>
 </div>
-  </a>
-</div>
-  </div>
-  
-  	<div class="column">
-    <h3><p>Work Experience</p></h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-  </div>
-  
-  <div class="column">
-    <h3><p>Professional Certificates</p></h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-    <h3><p>Skills and Interests</p></h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+	<div><i>Project Management Institute. </i></div>
+    <div>Grade: Above Target (highest), expired Jul 2024.</div>
+	<div>Coursework: Agile, Hybride and Predictive Project Leadership Approaches</div>
+	</li>
     
-  </div>
-</div>
-  
+    <p>
+  	
+    <li>B. Sc., Nutrition and Dietetics
+	<div><i>International Medical University, Malaysia</i></div>
+    <div>Grade: Second Upper Class, Jul 2011 - Sep 2015.</div>
+	<div>Coursework: IT for healthcare professional (HTML and CSS coding), Statistics for Nutrition</div>
+	</li>
+	</ul> 
+	</div>
+    
 </body>
 </html>
